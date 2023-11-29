@@ -3,6 +3,9 @@ import 'package:bakers_app/Pages/home_page.dart';
 import 'package:bakers_app/Core/color.dart';
 import 'package:bakers_app/Core/images.dart';
 import 'package:bakers_app/Pages/search_page.dart';
+import 'package:bakers_app/Pages/deals_page.dart';
+import 'inbox_page.dart';
+import 'account_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -47,7 +50,7 @@ class BottomNavigationPage extends StatelessWidget {
                     color: grayColor,
                   ),
                 ),
-                label: 'Explore',
+                label: 'Home',
                 backgroundColor: white,
               ),
               BottomNavigationBarItem(
@@ -147,9 +150,9 @@ class BottomNavigationPage extends StatelessWidget {
             children: const [
               HomePage(),
               SearchPage(),
-              //DealsScreen(),
-              //InboxScreen(),
-              //AccountScreen(),
+              DealsPage(),
+              InboxPage(),
+              AccountPage(),
             ],
           )),
     );

@@ -38,7 +38,8 @@ class _SearchPageState extends State<SearchPage> {
 
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: false,
+        backgroundColor: appColor,
+        automaticallyImplyLeading: false, //remove back option in appBar
         title: Padding(
           padding: const EdgeInsets.only(top: 20),
           child: Text(

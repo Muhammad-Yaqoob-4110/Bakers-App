@@ -22,6 +22,7 @@ class Images {
   static const String dealsIcon = 'assets/icons/deal.png';
   static const String inboxIcon = 'assets/icons/inbox.png';
   static const String accountIcon = 'assets/icons/user.png';
+  static const String homeIcon = 'assets/icons/home1.png';
   // gridItems
   static const String donut1 = 'assets/icons/donut1.png';
   static const String cake = 'assets/images/cake.jpg';
