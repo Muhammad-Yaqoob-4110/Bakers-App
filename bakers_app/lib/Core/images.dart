@@ -25,6 +25,13 @@ class Images {
   // gridItems
   static const String donut1 = 'assets/icons/donut1.png';
   static const String cake = 'assets/images/cake.jpg';
+  static const String bread = 'assets/images/bread.jpg';
+  static const String cookies = 'assets/images/cookies.jpg';
+  static const String pastries = 'assets/images/pastries.jpg';
+  static const String pietarts = 'assets/images/pies_tarts.jpg';
+  static const String cake2 = 'assets/images/01.png';
+  static const String cake3 = 'assets/images/02.png';
+  static const String cake4 = 'assets/images/03.png';
 
   static const String profilePic = 'assets/images/profile.png';
 

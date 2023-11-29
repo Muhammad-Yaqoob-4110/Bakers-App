@@ -8,6 +8,8 @@ const Color pink03 = Color(0xFFFEE0E8);
 const Color gray02 = Color(0XFFE0E0E0);
 const Color blackShadow = Color(0xFFDAD9DA);
 const Color grayColor = Color.fromARGB(255, 119, 119, 119);
+const Color mediumGrayColor = Color.fromARGB(255, 100, 100, 100);
+const Color textFieldGrayColor = Color.fromARGB(255, 198, 198, 198);
 const Color black = Color(0XFF414141);
 
 const Color white = Color(0xFFFFFFFF);

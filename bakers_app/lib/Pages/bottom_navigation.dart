@@ -2,6 +2,7 @@ import 'package:bakers_app/Controller/bottom_navigation_controller.dart';
 import 'package:bakers_app/Pages/home_page.dart';
 import 'package:bakers_app/Core/color.dart';
 import 'package:bakers_app/Core/images.dart';
+import 'package:bakers_app/Pages/search_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -145,7 +146,7 @@ class BottomNavigationPage extends StatelessWidget {
             index: landingPageController.tabIndex.value,
             children: const [
               HomePage(),
-              //SearchScreen(),
+              SearchPage(),
               //DealsScreen(),
               //InboxScreen(),
               //AccountScreen(),
