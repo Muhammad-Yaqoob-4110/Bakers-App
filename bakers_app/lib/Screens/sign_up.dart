@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:bakers_app/Pages/home_page.dart';
 import 'package:bakers_app/APIs/signup_api.dart';
+import 'package:bakers_app/Core/color.dart';
+import 'package:bakers_app/Pages/bottom_navigation.dart';
 
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({super.key});
@@ -13,8 +14,15 @@ class SignUpScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Sign Up'),
+        title: const Text(
+          'Sign Up',
+          style: TextStyle(
+            color: black, // Change the text color of the title
+            fontWeight: FontWeight.bold, // Add bold font weight
+          ),
+        ),
       ),
+      backgroundColor: background,
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -61,7 +69,7 @@ class SignUpScreen extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const HomePage(),
+                        builder: (context) => BottomNavigationPage(),
                       ),
                     );
                   }
@@ -77,7 +85,7 @@ class SignUpScreen extends StatelessWidget {
                 });
 
                 Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(builder: (_) => const HomePage()),
+                  MaterialPageRoute(builder: (_) => BottomNavigationPage()),
                 );
               },
               child: const Text('Sign Up'),
