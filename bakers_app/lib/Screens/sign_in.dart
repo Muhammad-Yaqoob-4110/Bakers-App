@@ -1,50 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:bakers_app/Screens/sign_up.dart';
-import 'package:bakers_app/Pages/home_page.dart';
+import 'package:bakers_app/Pages/bottom_navigation.dart';
 import 'package:bakers_app/APIs/login_api.dart';
+import 'package:bakers_app/Core/color.dart';
 
-class SignIn extends StatelessWidget {
+class SignIn extends StatefulWidget {
   const SignIn({super.key});
 
+  @override
+  State<SignIn> createState() => _SignInState();
+}
+
+class _SignInState extends State<SignIn> {
   // Function to handle login button press
-  // Future<void> handleLogin(
-  //     BuildContext context, String email, String password) async {
-  //   try {
-  //     const String apiUrl = 'http://localhost:3005/api/user/login';
-
-  //     final Map<String, dynamic> response = await loginUser(
-  //       url: apiUrl,
-  //       email: email,
-  //       password: password,
-  //     );
-
-  //     if (response['success'] == true) {
-  //       // If login is successful, navigate to the HomePage
-  //       Navigator.of(context).pushReplacement(
-  //         MaterialPageRoute(builder: (_) => const HomePage()),
-  //       );
-  //     } else {
-  //       // If login failed, display an error message or handle it accordingly
-  //       // You can show a snackbar or dialog to inform the user about the failure
-  //       ScaffoldMessenger.of(context).showSnackBar(
-  //         const SnackBar(
-  //           content: Text('Login failed. Please try again.'),
-  //           duration: Duration(seconds: 3),
-  //         ),
-  //       );
-  //     }
-  //   } catch (e) {
-  //     print('Error during login: $e');
-  //     ScaffoldMessenger.of(context).showSnackBar(
-  //       const SnackBar(
-  //         content:
-  //             Text('An error occurred during login. Please try again later.'),
-  //         duration: Duration(seconds: 3),
-  //       ),
-  //     );
-  //   }
-  //}
-
   @override
   Widget build(BuildContext context) {
     var email = '';
@@ -52,8 +20,16 @@ class SignIn extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('LogIn'),
+        title: const Text(
+          'LogIn',
+          style: TextStyle(
+            color: black, // Change the text color of the title
+            fontWeight: FontWeight.bold, // Add bold font weight
+          ),
+        ),
+        backgroundColor: background,
       ),
+      backgroundColor: background,
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -89,7 +65,7 @@ class SignIn extends StatelessWidget {
                 //);
 
                 loginUser(
-                        url: "http://localhost:3005/api/user/login",
+                        url: "http://10.5.124.59:3005/api/user/login",
                         email: email,
                         password: password)
                     .then((responseData) {
@@ -98,7 +74,7 @@ class SignIn extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const HomePage(),
+                        builder: (context) => BottomNavigationPage(),
                       ),
                     );
                   }
@@ -114,7 +90,7 @@ class SignIn extends StatelessWidget {
                 });
 
                 Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(builder: (_) => const HomePage()),
+                  MaterialPageRoute(builder: (_) => BottomNavigationPage()),
                 );
               },
               child: const Text('Login'),
