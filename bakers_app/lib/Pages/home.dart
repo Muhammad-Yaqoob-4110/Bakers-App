@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:bakers_app/Pages/home_page.dart';
-import 'package:bakers_app/core/color.dart';
-import 'package:bakers_app/core/text_style.dart';
-import 'package:bakers_app/Core/color.dart';
+//import 'package:bakers_app/Pages/home_page.dart';
+//import 'package:bakers_app/core/color.dart';
+//import 'package:bakers_app/core/text_style.dart';
+//import 'package:bakers_app/Core/color.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
