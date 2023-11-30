@@ -12,7 +12,6 @@ class SignIn extends StatefulWidget {
 }
 
 class _SignInState extends State<SignIn> {
-  // Function to handle login button press
   @override
   Widget build(BuildContext context) {
     var email = '';
@@ -23,8 +22,8 @@ class _SignInState extends State<SignIn> {
         title: const Text(
           'LogIn',
           style: TextStyle(
-            color: black, // Change the text color of the title
-            fontWeight: FontWeight.bold, // Add bold font weight
+            color: black,
+            fontWeight: FontWeight.bold,
           ),
         ),
         backgroundColor: pink01,
@@ -58,12 +57,7 @@ class _SignInState extends State<SignIn> {
             const SizedBox(height: 24),
             ElevatedButton(
               onPressed: () {
-                //handleLogin(context, email, password);
-                // Then navigate to the HomeScreen on button press
-                //Navigator.of(context).pushReplacement(
-                //MaterialPageRoute(builder: (_) => const HomePage()),
-                //);
-
+                //handle login logic
                 loginUser(
                         url: "http://10.5.124.59:3005/api/user/login",
                         email: email,
@@ -79,7 +73,7 @@ class _SignInState extends State<SignIn> {
                     );
                   }
                 }).catchError((error) {
-                  print('Error during login: $error');
+                  //print('Error during login: $error');
                   ScaffoldMessenger.of(context).showSnackBar(
                     const SnackBar(
                       content: Text(

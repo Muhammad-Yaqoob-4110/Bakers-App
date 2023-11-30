@@ -17,8 +17,8 @@ class SignUpScreen extends StatelessWidget {
         title: const Text(
           'Sign Up',
           style: TextStyle(
-            color: black, // Change the text color of the title
-            fontWeight: FontWeight.bold, // Add bold font weight
+            color: black,
+            fontWeight: FontWeight.bold,
           ),
         ),
       ),
@@ -58,6 +58,7 @@ class SignUpScreen extends StatelessWidget {
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
+                //handle sign up logic
                 signupUser(
                         url: "http://localhost:3005/api/user",
                         username: username,
@@ -74,7 +75,7 @@ class SignUpScreen extends StatelessWidget {
                     );
                   }
                 }).catchError((error) {
-                  print('Error during login: $error');
+                  //print('Error during login: $error');
                   ScaffoldMessenger.of(context).showSnackBar(
                     const SnackBar(
                       content: Text(
@@ -83,7 +84,7 @@ class SignUpScreen extends StatelessWidget {
                     ),
                   );
                 });
-
+                //navigate to bottom navigation page
                 Navigator.of(context).pushReplacement(
                   MaterialPageRoute(builder: (_) => BottomNavigationPage()),
                 );

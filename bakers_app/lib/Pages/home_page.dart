@@ -18,6 +18,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  //selected category index
   int selectIndex = 0;
   @override
   Widget build(BuildContext context) {
@@ -35,6 +36,7 @@ class _HomePageState extends State<HomePage> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
+                    //title
                     RichText(
                       text: TextSpan(
                         children: [
@@ -58,13 +60,15 @@ class _HomePageState extends State<HomePage> {
                         ],
                       ),
                     ),
+                    //search button
                     CircleButton(
-                      onTap: () {},
+                      onTap: () {}, //to be implemented
                       image: 'search.svg',
                     )
                   ],
                 ),
               ),
+              //category menu widget
               categoryMenu(),
               Expanded(
                 flex: 2,
@@ -72,7 +76,7 @@ class _HomePageState extends State<HomePage> {
                     padding: const EdgeInsets.only(top: 50.0),
                     itemCount: cakes.length,
                     physics: const BouncingScrollPhysics(),
-                    scrollDirection: Axis.horizontal,
+                    scrollDirection: Axis.horizontal, //horizontal list of items
                     itemBuilder: (itemBuilder, index) {
                       return GestureDetector(
                         onTap: () {
@@ -86,6 +90,7 @@ class _HomePageState extends State<HomePage> {
                       );
                     }),
               ),
+              //recommended section
               const Text(
                 'Recommended',
                 style: TextStyle(
@@ -98,7 +103,8 @@ class _HomePageState extends State<HomePage> {
                 flex: 1,
                 child: ListView.builder(
                     itemCount: cakes.length,
-                    scrollDirection: Axis.horizontal,
+                    scrollDirection:
+                        Axis.horizontal, //horizontal list of recommended items
                     padding: const EdgeInsets.only(top: 40.0, bottom: 40.0),
                     itemBuilder: (itemBuilder, index) {
                       return GestureDetector(
@@ -125,8 +131,9 @@ class _HomePageState extends State<HomePage> {
             final category = categories[index];
             return GestureDetector(
               onTap: () {
-                setState(() => selectIndex = index);
+                setState(() => selectIndex = index); //update selected index
               },
+              //Category Button
               child: CategoryButton(
                 category: category,
                 index: selectIndex,

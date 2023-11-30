@@ -6,6 +6,7 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //Delay navigation to the sign in screen for 5 seconds
     Future.delayed(const Duration(seconds: 5), () {
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(
@@ -17,7 +18,7 @@ class SplashScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Stack(
-        fit: StackFit.expand,
+        fit: StackFit.expand, //fill the entire screen
         children: [
           // Background Image
           Image.asset(
@@ -33,7 +34,7 @@ class SplashScreen extends StatelessWidget {
                   './assets/bakers.png',
                   height: 100,
                 ),
-                const SizedBox(height: 30),
+                const SizedBox(height: 30), //sizedbox for vertical space
                 const Text(
                   'Welcome to My Bakery!',
                   style: TextStyle(
