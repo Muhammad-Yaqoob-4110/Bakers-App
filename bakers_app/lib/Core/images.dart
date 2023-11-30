@@ -34,7 +34,7 @@ class Images {
   static const String cake3 = 'assets/images/02.png';
   static const String cake4 = 'assets/images/03.png';
 
-  static const String profilePic = 'assets/images/profile.png';
+  static const String profilePic = 'assets/icons/user.png';
 
   static const String cameraIcon = 'assets/icons/camera.png';
   static const String galleryIcon = 'assets/icons/gallery.png';

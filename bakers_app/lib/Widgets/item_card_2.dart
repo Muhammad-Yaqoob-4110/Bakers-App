@@ -82,7 +82,7 @@ class ItemCard02 extends StatelessWidget {
                       text: TextSpan(
                         children: [
                           TextSpan(
-                            text: '\$',
+                            text: 'Rs. ',
                             style: txtHeading.copyWith(fontSize: 10.0),
                           ),
                           TextSpan(

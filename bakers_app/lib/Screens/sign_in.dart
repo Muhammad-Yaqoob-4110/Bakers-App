@@ -27,9 +27,9 @@ class _SignInState extends State<SignIn> {
             fontWeight: FontWeight.bold, // Add bold font weight
           ),
         ),
-        backgroundColor: background,
+        backgroundColor: pink01,
       ),
-      backgroundColor: background,
+      backgroundColor: pink01,
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(

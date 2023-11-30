@@ -121,7 +121,7 @@ class _DetailPageState extends State<DetailPage> {
                           style: txtBtnCategory.copyWith(color: mainColor),
                         ),
                         roundButton(
-                          text: '\$${widget.cake.price}',
+                          text: 'Rs. ${widget.cake.price}',
                           fontsize: 14,
                         )
                       ],

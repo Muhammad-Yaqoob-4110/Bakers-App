@@ -22,7 +22,7 @@ class SignUpScreen extends StatelessWidget {
           ),
         ),
       ),
-      backgroundColor: background,
+      backgroundColor: pink01,
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(

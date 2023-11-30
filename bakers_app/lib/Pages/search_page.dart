@@ -106,7 +106,7 @@ class _SearchPageState extends State<SearchPage> {
                 hintTextColor: mediumGrayColor,
                 // inputBorder: InputBorder.none,
                 textfiledColor: const Color.fromARGB(255, 232, 232, 232),
-                hintText: 'Search foods and Ketchen',
+                hintText: 'Search for Cakes, Desserts...',
               ),
             ),
             SizedBox(
