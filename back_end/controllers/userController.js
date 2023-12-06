@@ -3,6 +3,7 @@ const User = require("../models/user");
 async function createUser(req, res) {
   try {
     const user = await User.create(req.body);
+    //201 for created
     res.status(201).json({
       message: "User has been created successfully.",
       user: user,});
@@ -11,6 +12,7 @@ async function createUser(req, res) {
   }
 }
 
+//get user by email
 async function getUser(req, res) {
   try {
     const { email } = req.params;
@@ -22,10 +24,12 @@ async function getUser(req, res) {
 
     res.json({ message: "User found", data: user });
   } catch (err) {
+    //500 for server errors
     res.status(500).json({ success: false, message: err.message, data: null });
   }
 }
 
+//update user
 async function updateUser(req, res) {
   try {
     const { email } = req.params;
@@ -43,6 +47,7 @@ async function updateUser(req, res) {
   }
 }
 
+//delete user
 async function deleteUser(req, res) {
     try {
         const { email } = req.params;
@@ -54,6 +59,7 @@ async function deleteUser(req, res) {
     }
 }
 
+//login user by checking email and correct password
 const login = async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -74,6 +80,7 @@ const login = async (req, res) => {
   }
 };
 
+//export all funtions to be used in other files
 module.exports = {
   createUser,
   getUser,
