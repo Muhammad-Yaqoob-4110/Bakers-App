@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 
+//Schema for user
 const userSchema = mongoose.Schema(
   {
     username: String,
@@ -8,6 +9,6 @@ const userSchema = mongoose.Schema(
       unique: true,
     },
     password: String,
-},{ timestamps: true });
+},{ timestamps: true });//adds created at and updated at attributes in schema
 
 module.exports = mongoose.model("Users", userSchema);
