@@ -1,5 +1,9 @@
+//This is the splash screen.
+//The first intro screen of this bakery application.
+//It show the intro for first 5 seconds then navigate to the next page.
+
 import 'package:flutter/material.dart';
-import 'package:bakers_app/Screens/sign_in.dart';
+import 'package:bakers_app/Pages/bottom_navigation.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -10,7 +14,7 @@ class SplashScreen extends StatelessWidget {
     Future.delayed(const Duration(seconds: 5), () {
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(
-          builder: (_) => const SignIn(),
+          builder: (_) => BottomNavigationPage(),
         ),
       );
     });
